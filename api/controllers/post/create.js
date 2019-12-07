@@ -29,11 +29,12 @@ module.exports = {
 
     const userId = this.req.session.userId
     console.log(userId)
-    // console.log(this.req.me)
+    
+    //many to one relationship. post objects to one user
+    await Post.create({title: inputs.title, body: inputs.postBody, user: userId})
 
-    await Post.create({title: inputs.title, body: inputs.postBody})
-
-    return;
+    this.res.redirect('/home')
+    // return ;
   }
 
 

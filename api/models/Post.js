@@ -7,6 +7,9 @@ module.exports = {
         body: {
             type: 'String',
             required: true
+        },
+        user: {
+            model: 'user'
         }
     }
 }

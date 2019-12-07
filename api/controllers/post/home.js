@@ -3,7 +3,9 @@ module.exports = async function(req, res) {
 
     //load from pages.home
     //pass objects to the homepage
-    const allPosts = await Post.find()
+
+    const userId = req.session.userid
+    const allPosts = await Post.find({user: userId})
     res.view('pages/home', 
         {allPosts}
     )

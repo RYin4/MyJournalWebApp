@@ -8,6 +8,17 @@
             border-radius: 5px;
             border: solid 1px rgb(199, 199, 199)
         }
+
+            .button {
+    background-color:grey; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
     </style>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -39,8 +50,14 @@
             <div>Create Post</div>
             <input name='title' type="text" placeholder="Post Title">
             <input name='postBody' type="text" placeholder="Post Body">
-            <button type="submit">Submit</button>
+            <div><button class="button" type="submit">Submit</button></div>
         </form>
+
+
+
+
+
+
 
         <div>
             <% allPosts.forEach(p => { %>
