@@ -44,6 +44,7 @@ module.exports.security = {
   *                                                                           *
   ****************************************************************************/
 
-  csrf: true
+  //for demo purposes we will disable csrf
+  csrf: false
 
 };

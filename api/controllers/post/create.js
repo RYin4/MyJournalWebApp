@@ -27,6 +27,10 @@ module.exports = {
   fn: async function (inputs) {
     console.log('We are now inside of post/create action')
 
+    const userId = this.req.session.userId
+    console.log(userId)
+    // console.log(this.req.me)
+
     await Post.create({title: inputs.title, body: inputs.postBody})
 
     return;
